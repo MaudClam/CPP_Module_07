@@ -21,8 +21,8 @@ int main() {
 	char		arr2[] = {'a', 'b', 'c', 'd', 'e'};
 	std::string	arr3[] = {"abc", "def", "ghi", "jkl", "mno"};
 
-	std::cout	<< "Function "BOLD"template<class T>void"
-				<< TAB"iter(T, size_t, void (*f)(T)) \n"NORMAL
+	std::cout	<< "Function " BOLD "template<class T>void"
+				<< TAB "iter(T, size_t, void (*f)(T)) \n" NORMAL
 				<< "will just accept and print three arrays of different types:"
 				<< std::endl;
 	iter(arr1, 5, printElement);
