@@ -3,7 +3,7 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mclam <mclam@student.21-school.ru>         +#+  +:+       +#+        */
+/*   By: mclam <mclam@student.42wolfsburg.de>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/24 15:34:05 by mclam             #+#    #+#             */
 /*   Updated: 2022/08/24 15:34:05 by mclam            ###   ########.fr       */
