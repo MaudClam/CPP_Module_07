@@ -14,6 +14,7 @@
 # define ARRAY_HPP
 
 # include <iostream>
+# include <cstdlib>
 # define MAX_VAL 		750
 # define OUTPUT_LIMIT	6
 # define SUCCESS		0
