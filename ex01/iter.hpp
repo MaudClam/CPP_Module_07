@@ -15,13 +15,12 @@
 
 #include <iostream>
 
-template <class T>
-void	iter(T *arr, size_t len, void (*f)(T &element)) {
+template <class T> void	iter(T *arr, size_t len, void (*f)(T &element)) {
 	for (size_t i = 0; i < len; i++)
 		f(arr[i]);
 }
 
-template<class T> void	printElement(T &element) {
+template<class T> void	print(T &element) {
 	std::cout << element << " ";
 }
 

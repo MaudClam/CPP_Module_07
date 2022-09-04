@@ -31,4 +31,25 @@ template<class T> T		&max(T &a, T &b) {
 	return a > b ? a : b;
 }
 
+// TEST COMPLEX CLASS FROM CHECKLIST EX00
+class TestComplexClass
+{
+public:
+	TestComplexClass( void ) : _n( 0 ) {}
+	TestComplexClass( int n ): _n( n ) {}
+	TestComplexClass &operator=( TestComplexClass &a ) { _n = a._n; return *this; }
+	bool operator==( TestComplexClass const &rhs ) const { return (this->_n == rhs._n); }
+	bool operator!=( TestComplexClass const &rhs ) const{ return (this->_n != rhs._n); }
+	bool operator>( TestComplexClass const &rhs ) const { return (this->_n > rhs._n); }
+	bool operator<( TestComplexClass const &rhs ) const { return (this->_n < rhs._n); }
+	bool operator>=( TestComplexClass const &rhs ) const { return (this->_n >= rhs._n); }
+	bool operator<=( TestComplexClass const &rhs ) const { return (this->_n <= rhs._n); }
+	int get_n() const { return _n; }
+private:
+	int _n;
+};
+
+std::ostream &operator<<(std::ostream &o, const TestComplexClass &a) { o << a.get_n(); return o; }
+
+
 #endif

@@ -25,11 +25,11 @@ int main() {
 				<< TAB "iter(T, size_t, void (*f)(T)) \n" NORMAL
 				<< "will just accept and print three arrays of different types:"
 				<< std::endl;
-	iter(arr1, 5, printElement);
+	iter(arr1, 5, print);
 	std::cout << std::endl;
-	iter(arr2, 5, printElement);
+	iter(arr2, 5, print);
 	std::cout << std::endl;
-	iter(arr3, 5, printElement);
+	iter(arr3, 5, print);
 	std::cout << std::endl;
 	return 0;
 }

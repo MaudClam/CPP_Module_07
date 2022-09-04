@@ -14,7 +14,15 @@
 # define ARRAY_HPP
 
 # include <iostream>
-# define OUTPUT_LIMIT	4
+# define MAX_VAL 		750
+# define OUTPUT_LIMIT	6
+# define SUCCESS		0
+# define ERROR			1
+
+template<class Template> class				Array;
+template<typename Template> std::ostream	&operator<<(std::ostream &out, const Array<Template> &array);
+template<class Array, class T> bool			testFunction(Array &array, T &mirror);
+bool										subjectTest( void );
 
 template<class Template> class Array
 {
@@ -64,6 +72,38 @@ template<typename Template> std::ostream	&operator<<(std::ostream &out, const Ar
 		out	<< array[n];
 	}
 	return out;
+}
+
+template<class Array, class T> bool	testFunction(Array &array, T &mirror)
+{
+	std::cout	<< "Printing array[" << array.size() << "] = {"
+				<< array << "}" << std::endl;
+
+	for (int i = 0; i < MAX_VAL; i++) {
+		if (mirror[i] != array[i]) {
+			std::cerr << "didn't save the same value!!" << std::endl;
+			return ERROR;
+		}
+	}
+
+	// Testing exceptions
+	std::cout	<< "Trying array[-2]: ";
+	try {
+		std::cout << array[-2] << std::endl;
+	}
+	catch(const std::exception& e) {
+		std::cerr << e.what() << '\n';
+	}
+
+	std::cout	<< "Trying array[MAX_VAL]: ";
+	try {
+		std::cout << array[MAX_VAL] << std::endl;
+	}
+	catch(const std::exception& e) {
+		std::cerr << e.what() << '\n';
+	}
+
+	return SUCCESS;
 }
 
 #endif
