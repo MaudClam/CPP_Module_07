@@ -20,16 +20,19 @@ int main() {
 	int			arr1[] = {1, 2, 3, 4, 5};
 	char		arr2[] = {'a', 'b', 'c', 'd', 'e'};
 	std::string	arr3[] = {"abc", "def", "ghi", "jkl", "mno"};
+	Awesome		arr4[5];
 
 	std::cout	<< "Function " BOLD "template<class T>void"
-				<< TAB "iter(T, size_t, void (*f)(T)) \n" NORMAL
-				<< "will just accept and print three arrays of different types:"
+				<< TAB "iter(T, size_t, void (*f)(T const)) \n" NORMAL
+				<< "will just accept and print four arrays of different types:"
 				<< std::endl;
 	iter(arr1, 5, print);
 	std::cout << std::endl;
 	iter(arr2, 5, print);
 	std::cout << std::endl;
 	iter(arr3, 5, print);
+	std::cout << std::endl;
+	iter(arr4, 5, print);
 	std::cout << std::endl;
 	return 0;
 }
